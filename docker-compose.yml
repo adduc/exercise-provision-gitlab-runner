@@ -1,0 +1,8 @@
+services:
+  ci:
+    hostname: gitlab-ci
+    image: gitlab/gitlab-runner:alpine
+    restart: always
+    volumes:
+      - ./config:/etc/gitlab-runner
+      - /var/run/docker.sock:/var/run/docker.sock
